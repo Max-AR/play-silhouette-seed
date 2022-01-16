@@ -45,11 +45,11 @@ class ChangePasswordController @Inject() (
           credentialsProvider.authenticate(credentials).flatMap { loginInfo =>
             val passwordInfo = passwordHasherRegistry.current.hash(newPassword)
             authInfoRepository.update[PasswordInfo](loginInfo, passwordInfo).map { _ =>
-              Redirect(routes.ChangePasswordController.view()).flashing("success" -> Messages("password.changed"))
+              Redirect(routes.ChangePasswordController.view).flashing("success" -> Messages("password.changed"))
             }
           }.recover {
             case _: ProviderException =>
-              Redirect(routes.ChangePasswordController.view()).flashing("error" -> Messages("current.password.invalid"))
+              Redirect(routes.ChangePasswordController.view).flashing("error" -> Messages("current.password.invalid"))
           }
         }
       )

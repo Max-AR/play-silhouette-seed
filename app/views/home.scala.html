@@ -64,7 +64,7 @@
                         }</li>
                     }
                     </ul>
-                    @helper.form(action = controllers.routes.TotpController.enableTotpSubmit()) {
+                    @helper.form(action = controllers.routes.TotpController.enableTotpSubmit) {
                         @helper.CSRF.formField
                         @b4.text(totpForm("verificationCode"), Symbol("_hiddenLabel") -> messages("totp.verification.code    "), Symbol("placeholder") -> messages("totp.verification.code"), Symbol("autocomplete") -> "off", Symbol("class") -> "form-control input-lg")
                         @b4.hidden(totpForm("sharedKey"))

@@ -8,16 +8,17 @@ version := "6.0.0"
 
 scalaVersion := "2.13.1"
 
-resolvers += Resolver.jcenterRepo
+val silhouetteVer = "7.0.2"
+
 
 resolvers += "Sonatype snapshots" at "https://oss.sonatype.org/content/repositories/snapshots/"
-
+resolvers += "Atlassian Releases" at "https://maven.atlassian.com/public/"
 libraryDependencies ++= Seq(
-  "com.mohiva" %% "play-silhouette" % "6.1.1",
-  "com.mohiva" %% "play-silhouette-password-bcrypt" % "6.1.1",
-  "com.mohiva" %% "play-silhouette-persistence" % "6.1.1",
-  "com.mohiva" %% "play-silhouette-crypto-jca" % "6.1.1",
-  "com.mohiva" %% "play-silhouette-totp" % "6.1.1",
+  "io.github.honeycomb-cheesecake" %% "play-silhouette" % silhouetteVer,
+  "io.github.honeycomb-cheesecake" %% "play-silhouette-password-bcrypt" % silhouetteVer,
+  "io.github.honeycomb-cheesecake" %% "play-silhouette-persistence" % silhouetteVer,
+  "io.github.honeycomb-cheesecake" %% "play-silhouette-crypto-jca" % silhouetteVer,
+  "io.github.honeycomb-cheesecake" %% "play-silhouette-totp" % silhouetteVer,
   "org.webjars" %% "webjars-play" % "2.8.0",
   "org.webjars" % "bootstrap" % "4.4.1" exclude("org.webjars", "jquery"),
   "org.webjars" % "jquery" % "3.2.1",
@@ -25,10 +26,10 @@ libraryDependencies ++= Seq(
   "com.iheart" %% "ficus" % "1.4.7",
   "com.typesafe.play" %% "play-mailer" % "7.0.1",
   "com.typesafe.play" %% "play-mailer-guice" % "7.0.1",
-//"com.enragedginger" %% "akka-quartz-scheduler" % "1.8.2-akka-2.6.x",
   "com.enragedginger" %% "akka-quartz-scheduler" % "1.8.3-akka-2.6.x",
   "com.adrianhurt" %% "play-bootstrap" % "1.5.1-P27-B4",
-  "com.mohiva" %% "play-silhouette-testkit" % "6.1.1" % "test",
+
+  "io.github.honeycomb-cheesecake" %% "play-silhouette-testkit" % silhouetteVer % "test",
   specs2 % Test,
   ehcache,
   guice,

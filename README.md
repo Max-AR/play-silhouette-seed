@@ -1,7 +1,9 @@
 Silhouette Seed Template
 =====================================
 
-The Silhouette Seed project is an Activator template which shows how [Silhouette](https://github.com/mohiva/play-silhouette) can be implemented in a Play Framework application. It's a starting point which can be extended to fit your needs.
+The Silhouette Seed project is an Activator template which shows how 
+[Silhouette](https://github.com/honeycomb-cheesecake/play-silhouette) can be implemented in a Play Framework 
+application. It's a starting point which can be extended to fit your needs.
 
 ## Example
 
@@ -28,7 +30,10 @@ Or you can find a running example of this template under the following URL: http
 
 ## Documentation
 
-Consult the [Silhouette documentation](http://silhouette.mohiva.com/docs) for more information. If you need help with the integration of Silhouette into your project, don't hesitate and ask questions in our [mailing list](https://groups.google.com/forum/#!forum/play-silhouette) or on [Stack Overflow](http://stackoverflow.com/questions/tagged/playframework).
+Consult the [Silhouette documentation](https://silhouette.readme.io) for more information. If you need help with the 
+integration of Silhouette into your project, don't hesitate and ask questions in our 
+[mailing list](https://groups.google.com/forum/#!forum/play-silhouette) or on 
+[Stack Overflow](http://stackoverflow.com/questions/tagged/playframework).
 
 # License
 
